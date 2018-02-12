@@ -1,0 +1,9 @@
+com\qivos\api\ws\dto\dtoModel\NewVerificationCodeDto.class
+com\qivos\api\ws\restServices\VerificationInfoRestServices.class
+com\qivos\api\ws\dto\RequestCodesToSearchDto.class
+com\qivos\api\ws\controllers\VerifiedCodeDataController.class
+com\qivos\api\ws\dto\ResponseCodeStatusListDto.class
+com\qivos\api\ws\model\VerifiedCode.class
+com\qivos\api\ws\dto\dtoModel\VerificationCodeResponseModel.class
+com\qivos\api\ws\dto\RequestVerifiedCodesToPersistOrUpdate.class
+com\qivos\api\ws\dto\dtoModel\VerifiedCodeToSearch.class

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.qivos.api.ws_Katana_TPU" transaction-type="JTA">
+    <jta-data-source>java:comp/DefaultDataSource</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>CIDB-FFG${ffg.build.discriminator}</jta-data-source>
+        <jar-file>CIDataModel-${project.ci-core.version}.jar</jar-file>
+        <jar-file>../CI-FFG-Custom-${project.version}.jar</jar-file>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <property name="eclipselink.logging.level" value="INFO"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.cache.size.default" value="5000"/>
+            <property name="eclipselink.cache.shared.default" value="true"/>
+            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="eclipselink.cache.type.default" value="SoftWeak"/>
+            <property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+            <property name="eclipselink.jdbc.batch-writing.size" value="500"/>
+            <property name="eclipselink.weaving.internal" value="false"/>
+            <property name="eclipselink.weaving.changetracking" value="true"/>
+        </properties>
+  </persistence-unit>
+</persistence>
